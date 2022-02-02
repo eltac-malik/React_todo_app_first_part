@@ -9,7 +9,7 @@ function Form(props)
 
   const change = (e) => {setForm({...form,[e.target.id]:e.target.value})}
 
-  const onSub = (e) => 
+  const onClck = (e) => 
   {
       if (form.name === "" || form.phonenumber === "") 
       {
@@ -27,13 +27,13 @@ function Form(props)
 
   return (
 
-    <form onSubmit={onSub} className="App">
+    <form  className="App">
       <br />
       <input value={form.name} id='name' placeholder='Fullname' autocomplete="off" onChange={change} />
       <br />
       <input  value={form.phonenumber} id='phonenumber' autocomplete="off" placeholder='Phone Number' onChange={change} />
       <br />
-      <button >Add</button>
+      <button onClick={onClck}>Add</button>
 
       <h1>{form.name}  {form.phonenumber}</h1>
 
@@ -41,5 +41,7 @@ function Form(props)
 
   );
 }
+
+
 
 export default Form;
