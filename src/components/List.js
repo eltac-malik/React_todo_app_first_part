@@ -1,8 +1,12 @@
 import React from 'react';
 
-function List() {
+function List(props) {
   return <div>
-      <h1>Salam List</h1>
+    
+  <ul>
+    {props.licontact.map((e,i)=>(<li key={i}>{e.name}</li>))}
+  </ul>
+
   </div>;
 }
 

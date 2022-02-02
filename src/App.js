@@ -1,5 +1,6 @@
 import React from 'react';
 import Form from './components/Form'
+import Filter from './components/Filter';
 import List from './components/List'
 import { useState} from 'react';
 import { useEffect} from 'react';
@@ -15,12 +16,17 @@ function App() {
   return (
 
     <div className="App">
-      
-    {/* Burda Form.js propslar gedir */}
+    <br />
 
+    <Filter/>
+
+    {/* liste yazdirmaq */}
+    <List licontact={contact}/>
+
+    {/* Burda Form.js propslar gedir */}
     <Form addContactProp = {setContact} oldcontact = {contact} />
     <br />
-    <List/>
+
     </div>
 
   );
